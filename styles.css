@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background: #090f1a;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.blue {
+    background: cornflowerblue;
+}
+
+.red {
+    background: #d80d36;
+}
+
+.yellow {
+    background: #d8bf6e;
+}
+
+.dark {
+    background: #090f1a;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #090f1a;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: cornflowerblue;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #090f1a;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(/layered-waves-haikei.svg);
+}
